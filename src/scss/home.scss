@@ -227,8 +227,9 @@
 //========================================================================================================================================================
 
 .advantages {
-  background: url("@img/advantage/bg.png") bottom no-repeat;
-
+  background-image: url("@img/advantage/bg.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
   @media (max-width: $pc) {
     background-size: contain;
   }
