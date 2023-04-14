@@ -1,1 +1,8 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.circle {
+  background: rgba(199, 75, 77, 0.32);
+  filter: blur(50px);
+
+  pointer-events: none;
+}
