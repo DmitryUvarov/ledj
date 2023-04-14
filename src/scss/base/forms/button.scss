@@ -2,7 +2,9 @@
 // Снипет (HTML): btn
 
 .button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: rem(212);
 
   font-family: "P22UndergroundCYProDemi";

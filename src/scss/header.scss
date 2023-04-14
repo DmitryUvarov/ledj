@@ -47,11 +47,6 @@
     justify-content: flex-end;
     flex: 1 1 auto;
     margin-left: auto;
-    @media (min-width: $tablet) {
-      &:not(:last-child) {
-        margin-right: rem(35);
-      }
-    }
   }
 
   &__submit {
@@ -71,6 +66,10 @@
 }
 .menu {
   &__body {
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+    }
     @media (max-width: $tablet) {
       position: fixed;
       width: 100%;
@@ -95,6 +94,11 @@
     align-items: center;
     @include adaptiveValue("gap", 25, 10);
 
+    @media (min-width: $tablet) {
+      &:not(:last-child) {
+        margin-right: rem(35);
+      }
+    }
     @media (max-width: $tablet) {
       flex-direction: column;
     }
