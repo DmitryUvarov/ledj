@@ -1,16 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="hero">
+				<div class="hero__container">
+					<div class="hero__body">
+						<h1 class="hero__title">Рекламное агенство <span>полного цикла</span></h1>
+						<div class="hero__text">Скачайте наше коммерческое предложение для полного ознакомления </div>
+						<div class="hero__buttons">
+							<button class="hero__button button">СКАЧАТЬ MEDIA-KIT</button>
+							<button class="hero__button button button_line">ПОЗВОНИТЬ</button>
+						</div>
+						<div class="hero__social social-hero">
+							<span class="social-hero__title">Мы в соц.сетях</span>
+							<a href="#" class="social-hero__link _icon-facebook"></a>
+							<a href="#" class="social-hero__link _icon-telegram"></a>
+							<a href="#" class="social-hero__link _icon-instagram"></a>
+						</div>
+						<div class="hero__advantages advantages-hero">
+							<div class="advantages-hero__item">
+								<h3 class="advantages-hero__title">С 2020 года</h3>
+								<span class="advantages-hero__text">На рынке</span>
+							</div>
+							<div class="advantages-hero__item">
+								<h3 class="advantages-hero__title">35</h3>
+								<span class="advantages-hero__text">Сервисов и видов <br> услуг</span>
+							</div>
+							<div class="advantages-hero__item">
+								<h3 class="advantages-hero__title">500+</h3>
+								<span class="advantages-hero__text">Довольных клиентов</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__bg-ibg"><img src="@img/hero/bg.jpg" alt="background"></div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

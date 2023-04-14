@@ -2,13 +2,40 @@
 // Снипет (HTML): btn
 
 .button {
-	display: inline-flex;
-	padding: 0px 0px;
-	@media (any-hover: hover) {
-		&:hover {
-		}
-	}
-	&._fw {
-		width: 100%;
-	}
+  display: block;
+  min-width: rem(212);
+
+  font-family: "P22UndergroundCYProDemi";
+  font-size: rem(15);
+  line-height: 120%; /* 18/15 */
+
+  color: #ffffff;
+
+  background: #c74b4d;
+  box-shadow: 0px 16px 24px rgba(199, 75, 77, 0.25);
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0px 5px 24px rgba(199, 75, 77, 0.6);
+    }
+  }
+  &_line {
+    color: #c74b4d;
+    background-color: transparent;
+    border: 1px solid #c74b4d;
+    filter: drop-shadow(0px 16px 24px rgba(199, 75, 77, 0.25));
+    box-shadow: none;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #c74b4d;
+        color: #fff;
+        box-shadow: none;
+      }
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
 }

@@ -1,54 +1,184 @@
 //====================================================================================================
 
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #c74b4d;
+    box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
+    transition: left 0.3s ease 0s;
+    z-index: 6;
+
+    .menu-open & {
+      left: 0;
+    }
+  }
+
+  &__wrapper {
+  }
+
+  &__container {
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("min-height", 121, 80);
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 6;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    margin-left: auto;
+    @media (min-width: $tablet) {
+      &:not(:last-child) {
+        margin-right: rem(35);
+      }
+    }
+  }
+
+  &__submit {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 122.2%; /* 22/18 */
+    min-height: rem(51);
+
+    @media (max-width: $tablet) {
+      border-color: #fff;
+      color: #fff;
+      margin: 0 auto;
+      margin-top: rem(20);
+    }
+  }
+}
+.menu {
+  &__body {
+    @media (max-width: $tablet) {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      transition: left 0.3s ease 0s;
+      background-color: #c74b4d;
+      padding: rem(100) rem(15) rem(40);
+      z-index: 5;
+
+      .menu-open & {
+        left: 0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 25, 10);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 16, 1100, 991, 1);
+    line-height: 122.2%; /* 22/18 */
+    color: #ffffff;
+    display: block;
+    padding: rem(10) rem(5);
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: $tablet) {
+      font-size: rem(32);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #c74b4d;
+      }
+    }
+  }
+
+  &__icon {
+  }
+}
+
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: rem(40);
+    height: rem(28);
+    margin-left: rem(35);
+    cursor: pointer;
+    z-index: 6;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(3);
+      background-color: #fff;
+      border-radius: 2px;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
-*/
