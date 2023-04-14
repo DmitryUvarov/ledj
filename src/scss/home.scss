@@ -199,7 +199,6 @@
   }
 
   &__circle {
-    position: absolute;
     width: 191px;
     height: 181px;
     top: percent(70, 278);
@@ -222,6 +221,108 @@
     // transform: translateY(-50%);
     z-index: -1;
     pointer-events: none;
+  }
+}
+
+//========================================================================================================================================================
+
+.advantages {
+  background: url("@img/advantage/bg.png") bottom no-repeat;
+
+  @media (max-width: $pc) {
+    background-size: contain;
+  }
+  &__container {
+    position: relative;
+    @include adaptiveValue("padding-top", 45, 30);
+    @include adaptiveValue("padding-bottom", 189, 60);
+  }
+
+  &__body {
+  }
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 55, 40);
+    }
+  }
+
+  &__items {
+    counter-reset: item;
+    display: grid;
+    gap: rem(10);
+
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+    }
+  }
+
+  &__item {
+  }
+
+  &__circle {
+    width: 216px;
+    height: 191px;
+    top: percent(207, 625);
+    left: percent(1057, 1070);
+  }
+}
+
+.item-advantage {
+  position: relative;
+  background: #ffffff;
+  border-radius: rem(20);
+  display: flex;
+  align-items: center;
+  @include adaptiveValue("column-gap", 35, 20);
+  @include adaptiveValue("padding-top", 33, 20);
+  @include adaptiveValue("padding-bottom", 33, 20);
+  @include adaptiveValue("padding-left", 44, 25);
+  @include adaptiveValue("padding-right", 36, 15);
+
+  &::after {
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero) ".";
+    font-family: "Museo Sans Cyrl";
+    font-weight: 700;
+    @include adaptiveValue("font-size", 90, 70);
+    line-height: 46.2%; /* 43/93 */
+    text-transform: uppercase;
+    color: rgba(224, 224, 224, 0.33);
+
+    position: absolute;
+    top: rem(-10);
+    right: rem(12);
+  }
+  &__ico {
+    flex-shrink: 0;
+    @media (max-width: $mobile) {
+      max-width: rem(70);
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-family: "P22UndergroundCYProHeavy";
+    font-size: rem(16);
+    line-height: 112.5%; /* 18/16 */
+    color: #384044;
+
+    &:not(:last-child) {
+      margin-bottom: rem(9);
+    }
+  }
+
+  &__text {
+    font-family: "P22UndergroundCYMedium";
+    font-size: rem(13);
+    line-height: 138.5%; /* 18/13 */
+    color: #727272;
   }
 }
 
