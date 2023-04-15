@@ -482,12 +482,6 @@
     @media (min-width: $mobile) {
       flex: 1 0 50%;
     }
-
-    @media (max-width: $mobile) {
-      background-image: url("@img/connection/map.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
   }
 
   &__bg {

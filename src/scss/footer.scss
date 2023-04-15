@@ -1,3 +1,105 @@
 //====================================================================================================
 
+.footer {
+  background-image: url("@img/footer/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $tablet) {
+    background-position: center;
+  }
+
+  &__container {
+  }
+
+  &__body {
+    min-height: rem(190);
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: rem(20);
+      padding: rem(40) 0 rem(30);
+    }
+    @media (min-width: $tablet) {
+      align-items: center;
+      display: grid;
+      grid-template-columns: rem(125) 1fr rem(125);
+    }
+  }
+
+  &__logo {
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+    display: flex;
+
+    @media (min-width: $tablet) {
+      justify-content: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    column-gap: rem(21);
+  }
+}
+.footer-menu {
+  &__body {
+    display: flex;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+
+    @include adaptiveValue("gap", 25, 0, 1070, 991, 1);
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+    @media (min-width: $tablet) {
+      align-items: center;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: rem(18);
+    @include adaptiveValue("font-size", 18, 16, 1100, 991, 1);
+    line-height: 122.2%; /* 22/18 */
+    color: #ffffff;
+    display: block;
+    padding: rem(10) rem(5);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #c74b4d;
+      }
+    }
+  }
+}
+.social-footer {
+  &__link {
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          color: #c74b4d;
+        }
+      }
+    }
+
+    &::before {
+      color: #fff;
+      transition: all 0.3s ease 0s;
+      font-size: rem(25);
+    }
+  }
+}
+
 //====================================================================================================
