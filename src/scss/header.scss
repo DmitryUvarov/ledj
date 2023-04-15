@@ -7,20 +7,23 @@
   left: 0;
   z-index: 2;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background-color: #c74b4d;
-    box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
-    transition: left 0.3s ease 0s;
-    z-index: 6;
+  @media (max-width: $tablet) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: -100%;
+      background-color: #c74b4d;
+      box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
+      transition: left 0.3s ease 0s;
+      z-index: 6;
+      pointer-events: none;
 
-    .menu-open & {
-      left: 0;
+      .menu-open & {
+        left: 0;
+      }
     }
   }
 
@@ -35,6 +38,10 @@
     align-items: center;
 
     @include adaptiveValue("min-height", 121, 80);
+
+    @media (max-width: $tablet) {
+      justify-content: space-between;
+    }
   }
 
   &__logo {
@@ -43,10 +50,12 @@
   }
 
   &__menu {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1 1 auto;
-    margin-left: auto;
+    @media (min-width: $tablet) {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 1 auto;
+      margin-left: auto;
+    }
   }
 
   &__submit {
@@ -82,6 +91,8 @@
       background-color: #c74b4d;
       padding: rem(100) rem(15) rem(40);
       z-index: 5;
+
+      @include adaptiveValue("padding-top", 152, 100, 991, 375, 1);
 
       .menu-open & {
         left: 0;
