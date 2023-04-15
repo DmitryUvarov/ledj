@@ -101,7 +101,7 @@
       @include adaptiveValue("padding-top", 152, 100, 991, 375, 1);
 
       .menu-open & {
-        left: 0;
+        left: 0%;
       }
     }
   }
