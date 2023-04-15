@@ -21,9 +21,9 @@
         background-color: #c74b4d;
         box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
         transition: left 0.3s ease 0s;
-        -webkit-transition: left 0.3s ease;
-        -moz-transition: left 0.3s ease;
-        -o-transition: left 0.3s ease;
+        // -webkit-transition: left 0.3s ease;
+        // -moz-transition: left 0.3s ease;
+        // -o-transition: left 0.3s ease;
         z-index: 6;
         pointer-events: none;
 
@@ -92,9 +92,9 @@
       overflow-x: hidden;
       overflow-y: auto;
       transition: left 0.3s ease 0s;
-      -webkit-transition: left 0.3s ease;
-      -moz-transition: left 0.3s ease;
-      -o-transition: left 0.3s ease;
+      //   -webkit-transition: left 0.3s ease;
+      //   -moz-transition: left 0.3s ease;
+      //   -o-transition: left 0.3s ease;
       background-color: #c74b4d;
       padding: rem(100) rem(15) rem(40);
       z-index: 5;
@@ -169,9 +169,9 @@
     &::before,
     &::after {
       content: "";
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
+      //   -webkit-transition: all 0.3s ease;
+      //   -moz-transition: all 0.3s ease;
+      //   -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       right: 0;
       position: absolute;
@@ -179,7 +179,7 @@
       height: rem(3);
       background-color: #fff;
       border-radius: 2px;
-      transform: rotate(0);
+      //   transform: rotate(0);
     }
     &::before {
       top: 0;
