@@ -1,12 +1,11 @@
 //====================================================================================================
 
 .header {
-  //   position: absolute;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 2;
-  background-color: #232323;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
   &__wrapper {
     position: relative;
