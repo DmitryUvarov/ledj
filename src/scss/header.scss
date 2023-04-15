@@ -19,7 +19,7 @@
         left: -100%;
         background-color: #c74b4d;
         box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
-        transition: left 0.3s ease 0s;
+        transition: left 0.3s ease 100ms;
         z-index: 6;
         pointer-events: none;
 
@@ -87,7 +87,7 @@
       left: -100%;
       overflow-x: hidden;
       overflow-y: auto;
-      transition: left 0.3s ease 0s;
+      transition: left 0.3s ease 100ms;
       background-color: #c74b4d;
       padding: rem(100) rem(15) rem(40);
       z-index: 5;
@@ -162,7 +162,7 @@
     &::before,
     &::after {
       content: "";
-      transition: all 0.3s ease;
+      transition: all 0.3s ease 100ms;
       right: 0;
       position: absolute;
       width: 100%;
