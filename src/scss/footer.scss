@@ -53,10 +53,11 @@
   &__list {
     display: flex;
 
-    @include adaptiveValue("gap", 25, 0, 1070, 991, 1);
+    @include adaptiveValue("gap", 25, 10, 1070, 991, 1);
 
     @media (max-width: $tablet) {
       flex-direction: column;
+      gap: 0;
     }
     @media (min-width: $tablet) {
       align-items: center;
@@ -70,7 +71,7 @@
     font-family: "Gilroy";
     font-weight: 700;
     font-size: rem(18);
-    @include adaptiveValue("font-size", 18, 16, 1100, 991, 1);
+    @include adaptiveValue("font-size", 18, 16, 1100, 991, 2);
     line-height: 122.2%; /* 22/18 */
     color: #ffffff;
     display: block;

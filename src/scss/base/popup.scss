@@ -167,5 +167,12 @@ body::after {
     justify-content: center;
     width: 100%;
     height: 45px;
+
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(15);
+    line-height: 126.7%; /* 19/15 */
+    color: #ffffff;
   }
 }

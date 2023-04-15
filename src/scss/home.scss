@@ -569,7 +569,7 @@
     color: #ffffff;
 
     &:not(:last-child) {
-      margin-bottom: rem(20);
+      @include adaptiveValue("margin-bottom", 20, 15);
     }
   }
 
