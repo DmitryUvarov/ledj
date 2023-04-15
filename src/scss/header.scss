@@ -8,29 +8,26 @@
   z-index: 2;
 
   &__wrapper {
-    position: relative;
-    @media (max-width: $tablet) {
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: -100%;
-        background-color: #c74b4d;
-        box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
-        transition: left 0.3s ease 0s;
-        // -webkit-transition: left 0.3s ease;
-        // -moz-transition: left 0.3s ease;
-        // -o-transition: left 0.3s ease;
-        z-index: 6;
-        pointer-events: none;
+    // position: relative;
+    // @media (max-width: $tablet) {
+    //   &::before {
+    //     content: "";
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: -100%;
+    //     background-color: #c74b4d;
+    //     box-shadow: rgb(80 38 38 / 40%) 0px 7px 29px 0px;
+    //     transition: left 0.3s ease 0s;
+    //     z-index: 6;
+    //     pointer-events: none;
 
-        .menu-open & {
-          left: 0;
-        }
-      }
-    }
+    //     .menu-open & {
+    //       left: 0;
+    //     }
+    //   }
+    // }
   }
 
   &__container {
@@ -78,32 +75,31 @@
 }
 .menu {
   &__body {
+    display: none;
     @media (min-width: $tablet) {
       display: flex;
       align-items: center;
     }
-    @media (max-width: $tablet) {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: -100%;
-      overflow-x: hidden;
-      overflow-y: auto;
-      transition: left 0.3s ease 0s;
-      //   -webkit-transition: left 0.3s ease;
-      //   -moz-transition: left 0.3s ease;
-      //   -o-transition: left 0.3s ease;
-      background-color: #c74b4d;
-      padding: rem(100) rem(15) rem(40);
-      z-index: 5;
 
-      @include adaptiveValue("padding-top", 152, 100, 991, 375, 1);
+    // @media (max-width: $tablet) {
+    //   position: fixed;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: -100%;
+    //   overflow-x: hidden;
+    //   overflow-y: auto;
+    //   transition: left 0.3s ease 0s;
+    //   background-color: #c74b4d;
+    //   padding: rem(100) rem(15) rem(40);
+    //   z-index: 5;
 
-      .menu-open & {
-        left: 0%;
-      }
-    }
+    //   @include adaptiveValue("padding-top", 152, 100, 991, 375, 1);
+
+    //   .menu-open & {
+    //     left: 0%;
+    //   }
+    // }
   }
 
   &__list {
@@ -168,9 +164,6 @@
     &::before,
     &::after {
       content: "";
-      //   -webkit-transition: all 0.3s ease;
-      //   -moz-transition: all 0.3s ease;
-      //   -o-transition: all 0.3s ease;
       transition: all 0.3s ease;
       right: 0;
       position: absolute;
@@ -187,7 +180,7 @@
       bottom: 0;
     }
     span {
-      top: calc(50% - rem(1));
+      top: calc(50% - rem(1.5));
     }
     .menu-open & {
       span {
@@ -197,11 +190,11 @@
       &::after {
       }
       &::before {
-        top: calc(50% - rem(1));
+        top: calc(50% - rem(1.5));
         transform: rotate(-45deg);
       }
       &::after {
-        bottom: calc(50% - rem(1));
+        bottom: calc(50% - rem(1.5));
         transform: rotate(45deg);
       }
     }
