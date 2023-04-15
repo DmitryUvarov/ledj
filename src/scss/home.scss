@@ -527,7 +527,7 @@
   padding-right: rem(15);
 
   @media (max-width: $tablet) {
-    padding: 0 rem(15);
+    padding-left: rem(15);
   }
   @include adaptiveValue("padding-top", 62, 30);
   @include adaptiveValue("padding-bottom", 100, 40);
