@@ -1,9 +1,11 @@
 //====================================================================================================
 .hero {
   position: relative;
-  @include adaptiveValue("padding-top", 202, 120);
-  @include adaptiveValue("padding-bottom", 75, 40);
+
   &__container {
+    position: relative;
+    @include adaptiveValue("padding-top", 202, 120);
+    @include adaptiveValue("padding-bottom", 75, 40);
   }
 
   &__body {
@@ -84,6 +86,76 @@
     top: 0;
     left: 0;
     z-index: -1;
+  }
+
+  .contact-buttons {
+    position: absolute;
+    top: rem(250);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(38);
+
+    @media (max-width: $pc) {
+      right: rem(15);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include adaptiveValue("width", 90, 70);
+      @include adaptiveValue("height", 90, 70);
+      background: #c74b4d;
+      border-radius: 50%;
+
+      &::before {
+        color: #fff;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: rem(-12);
+        top: rem(-12);
+        right: rem(-12);
+        bottom: rem(-12);
+        border-radius: 50%;
+        background: rgba(199, 75, 77, 0.4);
+        animation: pulse 2.5s linear infinite;
+      }
+
+      &_phone {
+        &::before {
+          font-size: rem(41);
+          @include adaptiveValue("font-size", 41, 32);
+        }
+      }
+      &_telegram {
+        &::before {
+          font-size: rem(37);
+          @include adaptiveValue("font-size", 41, 28);
+        }
+      }
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
   }
 }
 
