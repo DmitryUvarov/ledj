@@ -252,6 +252,20 @@
   }
 
   &__item {
+    &::after {
+      counter-increment: item;
+      content: counter(item, decimal-leading-zero) ".";
+      font-family: "Museo Sans Cyrl";
+      font-weight: 700;
+      @include adaptiveValue("font-size", 90, 70);
+      line-height: 46.2%; /* 43/93 */
+      text-transform: uppercase;
+      color: rgba(224, 224, 224, 0.33);
+
+      position: absolute;
+      top: rem(-10);
+      right: rem(12);
+    }
   }
 
   &__circle {
@@ -266,12 +280,19 @@
 
 .services {
   &__container {
+    position: relative;
+    @include adaptiveValue("padding-top", 87, 30);
+    padding-bottom: rem(40);
+    // @include adaptiveValue("padding-bottom", 40, 40);
   }
 
   &__body {
   }
 
   &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 43, 30);
+    }
   }
 
   &__items {
@@ -279,6 +300,11 @@
 
   &__item {
     flex-direction: column;
+
+    @include adaptiveValue("padding-top", 30, 20);
+    @include adaptiveValue("padding-bottom", 23, 15);
+    @include adaptiveValue("padding-left", 32, 20);
+    @include adaptiveValue("padding-right", 32, 20);
   }
 }
 

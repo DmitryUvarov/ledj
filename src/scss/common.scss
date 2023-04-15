@@ -1,6 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 .title {
+  position: relative;
   font-weight: 700;
   @include adaptiveValue("font-size", 30, 22);
   line-height: 100%; /* 30/30 */
@@ -9,6 +10,16 @@
   color: #c74b4d;
 
   &_line {
+    &::before {
+      content: "";
+      position: absolute;
+      width: rem(76);
+      height: rem(2);
+      left: 50%;
+      bottom: rem(-6);
+      transform: translateX(-50%);
+      background-color: #c74b4d;
+    }
   }
 }
 
@@ -42,20 +53,6 @@
   @include adaptiveValue("padding-left", 44, 25);
   @include adaptiveValue("padding-right", 36, 15);
 
-  &::after {
-    counter-increment: item;
-    content: counter(item, decimal-leading-zero) ".";
-    font-family: "Museo Sans Cyrl";
-    font-weight: 700;
-    @include adaptiveValue("font-size", 90, 70);
-    line-height: 46.2%; /* 43/93 */
-    text-transform: uppercase;
-    color: rgba(224, 224, 224, 0.33);
-
-    position: absolute;
-    top: rem(-10);
-    right: rem(12);
-  }
   &__ico {
     flex-shrink: 0;
     @media (max-width: $mobile) {
@@ -90,9 +87,34 @@
   &__inner {
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 35, 20);
+    @include adaptiveValue("column-gap", 28, 20);
+
+    margin-bottom: rem(5);
   }
 
   &__link {
+    display: flex;
+    align-self: end;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #c74b4d;
+    filter: drop-shadow(0px 16px 24px rgba(199, 75, 77, 0.25));
+    border-radius: 5px;
+
+    font-family: "P22UndergroundCYProDemi";
+    font-size: rem(15);
+    line-height: 120%; /* 18/15 */
+    color: #c74b4d;
+    min-width: rem(126);
+    height: rem(38);
+    margin-top: auto;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #c74b4d;
+        color: #fff;
+      }
+    }
   }
 }
