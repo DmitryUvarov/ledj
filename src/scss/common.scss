@@ -86,4 +86,13 @@
     line-height: 138.5%; /* 18/13 */
     color: #727272;
   }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 35, 20);
+  }
+
+  &__link {
+  }
 }
