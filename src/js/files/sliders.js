@@ -37,8 +37,8 @@ function initSliders() {
 			loop: true,
 
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.companies__slider .button-prev',
+				nextEl: '.companies__slider .button-next',
 			},
 
 			// Брейкпоинты
@@ -52,6 +52,42 @@ function initSliders() {
 					spaceBetween: 10,
 				},
 				768: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				}
+			},
+
+		});
+	}
+	if (document.querySelector('.clients__slider')) {
+		new Swiper('.clients__slider', {
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			speed: 800,
+
+			loop: true,
+
+			navigation: {
+				prevEl: '.clients__slider .button-prev',
+				nextEl: '.clients__slider .button-next',
+			},
+
+			// Брейкпоинты
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				479: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				991: {
 					slidesPerView: 4,
 					spaceBetween: 10,
 				}
