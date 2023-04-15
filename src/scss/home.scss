@@ -454,3 +454,221 @@
 }
 
 //========================================================================================================================================================
+
+.connection {
+  position: relative;
+  &__container {
+  }
+
+  &__body {
+    @media (min-width: $mobile) {
+      display: flex;
+    }
+  }
+
+  &__form {
+    @media (min-width: $mobile) {
+      flex: 1 0 50%;
+    }
+    @media (max-width: $mobile) {
+      background-image: url("@img/connection/bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 rem(-15);
+    }
+  }
+
+  &__contact {
+    @media (min-width: $mobile) {
+      flex: 1 0 50%;
+    }
+
+    @media (max-width: $mobile) {
+      background-image: url("@img/connection/map.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__bg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__image-bg-ibg {
+    @media (min-width: $mobile) {
+      flex: 1 0 50%;
+    }
+  }
+
+  &__map-ibg {
+    @media (min-width: $mobile) {
+      flex: 1 0 50%;
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: 80%;
+      margin: 0 rem(-15);
+    }
+
+    &_hide {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+}
+.map {
+}
+
+.form-connection {
+  padding-right: rem(15);
+
+  @media (max-width: $tablet) {
+    padding: 0 rem(15);
+  }
+  @include adaptiveValue("padding-top", 62, 30);
+  @include adaptiveValue("padding-bottom", 100, 40);
+
+  &__title {
+    font-family: "Museo Sans Cyrl";
+    font-style: normal;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 30, 22);
+    line-height: 143.3%; /* 43/30 */
+    text-transform: uppercase;
+    color: #ffffff;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 48, 30);
+    }
+  }
+
+  &__line {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:not(:last-child) {
+      margin-bottom: rem(19);
+    }
+
+    @media (min-width: $mobile) {
+      max-width: 374px;
+    }
+  }
+
+  &__label {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 118.8%; /* 19/16 */
+    text-align: center;
+    color: #ffffff;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__input {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: 118.8%; /* 19/16 */
+    width: 100%;
+    @include adaptiveValue("height", 53, 45);
+    border: 1px solid #acacac;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    padding: 0 rem(15);
+
+    &:focus {
+      outline: 1px solid #fff;
+    }
+  }
+
+  &__button {
+    padding-top: rem(5);
+    @media (min-width: $mobile) {
+      max-width: 374px;
+    }
+  }
+  &__button-btn {
+    background: #c74b4d;
+    box-shadow: 0px 16px 24px rgba(199, 75, 77, 0.29);
+    border-radius: 5px;
+    @include adaptiveValue("height", 53, 45);
+    width: 100%;
+  }
+}
+
+.contact-connection {
+  position: relative;
+  background: #c74b4d;
+  min-height: rem(110);
+  height: max-content;
+
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: rem(17);
+  line-height: 123.5%; /* 21/17 */
+  text-align: center;
+  color: #ffffff;
+
+  align-self: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: rem(47);
+  padding: rem(15) rem(20) rem(15) rem(50);
+
+  @media (max-width: $mobile) {
+    margin: 0 rem(-15);
+    padding: rem(15);
+  }
+  @media (min-width: $mobile) {
+    margin-bottom: rem(72);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    background: #c74b4d;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+
+    @media (any-hover: hover) {
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &::before {
+      font-size: rem(25);
+    }
+  }
+}
+
+//========================================================================================================================================================

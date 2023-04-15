@@ -384,6 +384,52 @@
 				</div>
 			</section>
 
+			<section class="connection">
+				<div class="connection__container">
+					<div class="connection__body">
+
+
+						<form action="#" class="connection__form form-connection">
+
+							<h4 class="form-connection__title">Отправить заявку</h4>
+
+							<div class="form-connection__line">
+								<label for="inp1" class="form-connection__label">Ваше имя</label>
+								<input id="inp1" class="form-connection__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+							</div>
+							<div class="form-connection__line">
+								<label for="inp2" class="form-connection__label">Телефон</label>
+								<input id="inp2" class="form-connection__input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="" class="input">
+							</div>
+							<div class="form-connection__button">
+								<button type="button" class="form-connection__button-btn button">ОТПРАВИТЬ</button>
+							</div>
+
+
+
+						</form>
+
+						<div class="connection__contact contact-connection">
+							<a href="tel:+998999999999" class="contact-connection__item _icon-phone-outline"><span>+998 99 999 99 99</span></a>
+							<a href="#" class="contact-connection__item _icon-location"><span>Локация</span></a>
+						</div>
+						<div class="connection__map-ibg connection__map-ibg_hide">
+							<img src="@img/connection/map.jpg" alt="">
+						</div>
+
+
+					</div>
+				</div>
+				<div class="connection__bg">
+					<div class="connection__image-bg-ibg">
+						<img src="@img/connection/bg.jpg" alt="">
+					</div>
+					<div class="connection__map-ibg map">
+						<img src="@img/connection/map.jpg" alt="">
+					</div>
+				</div>
+			</section>
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
